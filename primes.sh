@@ -5,6 +5,32 @@
 #									...real quick
 #
 #		Actually, this program is pretty slow & you shouldn't use it
+# [josh9580@reed class_scratchpad]$ for i in {10,100,1000,10000,100000}; do echo; (>&2 echo $i Numbers); time ./primes.sh 0 $i 1>/dev/null; done
+# 
+# 10 Numbers
+# 
+# real	0m0.002s
+# user	0m0.002s
+# sys	0m0.000s
+# 
+# 100 Numbers
+# 
+# real	0m0.011s
+# user	0m0.011s
+# sys	0m0.000s
+# 
+# 1000 Numbers
+# 
+# real	0m0.542s
+# user	0m0.539s
+# sys	0m0.002s
+# 
+# 10000 Numbers
+# 
+# real	0m39.002s
+# user	0m38.901s
+# sys	0m0.001s
+# 
 #
 prime_test() {
 	let "end=$1-1"
